@@ -6,6 +6,8 @@ gem 'rails', '4.2.6'
 gem 'thin'
 # Use mysql as the database for Active Record
 gem 'sqlite3'
+#bootstrap-sass is easy to drop into Rails with the asset pipeline.
+gem 'bootstrap-sass', '~> 3.3.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -17,7 +19,6 @@ gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -39,6 +40,12 @@ gem 'cells-rails'
 gem 'devise'
 gem 'rolify'
 gem 'cancancan'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery-ui'
+  gem 'rails-assets-noty'
+  gem 'rails-assets-animate.css'
+end
 
 
 group :development, :test do

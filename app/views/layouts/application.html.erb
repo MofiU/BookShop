@@ -16,5 +16,37 @@
   </div>
 </div>
 <%= render 'shared/footer' %>
+
+<!-- Alert, Success, Error, Warning, Information, Confirm -->
+
+<script>
+  $(function(){
+    <% flash.each do |type, msg| %>
+      var type;
+      <% if type == 'alert' %>
+        type = 'warning'
+      <% elsif type == 'notice' %>
+        type = 'information'
+      <% else %>
+        return;
+      <% end %>
+      var n = noty({
+        type: type,
+        text: '<%= msg %>',
+        layout: 'topRight',
+        dismissQueue: true,
+        theme: 'bootstrapTheme',
+        animation: {
+          open: {height: 'toggle'}, // jQuery animate function property object
+          close: {height: 'toggle'}, // jQuery animate function property object
+          easing: 'swing', // easing
+          speed: 500 // opening & closing animation speed
+        }
+      });
+    <% end %>
+    <% flash.clear %>
+  });
+</script>
+
 </body>
 </html>
