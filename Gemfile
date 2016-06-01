@@ -54,3 +54,12 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'rspec-rails', '~> 3.4'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'phantomjs','2.1.1.0', :require => 'phantomjs/poltergeist'
+  gem 'simplecov'
+  gem 'factory_girl_rails'
+end

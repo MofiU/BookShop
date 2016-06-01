@@ -24,5 +24,9 @@ module BookShop
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     config.active_record.raise_in_transactional_callbacks = true
+    config.generators do |g|
+      g.test_framework :rspec
+      g.factory_girl dir: 'spec/factories'
+    end
   end
 end
