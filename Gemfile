@@ -47,10 +47,11 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-animate.css'
 end
 
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.4'
+  gem "rspec-cells"
 end
 
 group :development do
@@ -62,7 +63,6 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails', '~> 3.4'
   gem 'database_cleaner'
   gem 'capybara'
   gem 'poltergeist'
