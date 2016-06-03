@@ -36,6 +36,9 @@ gem 'cells-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# store session to database
+gem 'activerecord-session_store'
+
 # permission
 gem 'devise'
 gem 'rolify'
