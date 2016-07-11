@@ -1,38 +1,74 @@
-<!-- start slider -->
-<div id="fwslider">
-    <div class="slider_container">
-        <div class="slide">
-            <!-- Slide image -->
-                <% image_tag "banner.jpg" %>
-            <!-- /Slide image -->
-            <!-- Texts container -->
-            <div class="slide_content">
-                <div class="slide_content_wrap">
-                    <!-- Text title -->
-                    <h4 class="title">Aluminium Club</h4>
-                    <!-- /Text title -->
+<style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
 
-                    <!-- Text description -->
-                    <p class="description">Experiance ray ban</p>
-                    <!-- /Text description -->
-                </div>
-            </div>
-             <!-- /Texts container -->
-        </div>
-        <!-- /Duplicate to create more slides -->
-        <div class="slide">
-            <% image_tag "banner1.jpg" %>
-            <div class="slide_content">
-                <div class="slide_content_wrap">
-                    <h4 class="title">consectetuer adipiscing </h4>
-                    <p class="description">diam nonummy nibh euismod</p>
-                </div>
-            </div>
-        </div>
-        <!--/slide -->
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+</style>
+
+ <!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(<%= image_path('banner.jpg') %>)"></div>
+        <div class="swiper-slide" style="background-image:url(<%= image_path('banner1.jpg') %>)"></div>
     </div>
-    <div class="timers"></div>
-    <div class="slidePrev"><span></span></div>
-    <div class="slideNext"><span></span></div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
 </div>
-<!--/slider -->
+
+
+<!-- Initialize Swiper -->
+<script>
+$(function(){
+    var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    paginationClickable: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: 2500,
+    speed: 1000,
+    effect: 'fade',
+    autoplayDisableOnInteraction: false
+});
+})
+
+</script>
+
+
+
