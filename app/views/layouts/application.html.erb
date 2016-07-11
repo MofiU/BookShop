@@ -8,14 +8,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'shared/header_top' %>
-<%= render 'shared/header_bottom' %>
+<%= cell(:main).(:header_top) %>
+<%= cell(:main).(:header_bottom) %>
 <div class="main">
   <div class="wrap">
     <%= yield %>
   </div>
 </div>
-<%= render 'shared/footer' %>
+<%= cell(:main).(:footer) %>
 
 <!-- Alert, Success, Error, Warning, Information, Confirm -->
 

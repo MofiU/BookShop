@@ -66,6 +66,9 @@ GEM
     cells (4.1.1)
       tilt (>= 1.4, < 3)
       uber (>= 0.0.9)
+    cells-erb (0.0.7)
+      cells (~> 4.0)
+      erbse (>= 0.0.2)
     cells-rails (0.0.5)
       actionpack (>= 3.0)
       cells (>= 4.1)
@@ -89,6 +92,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    erbse (0.0.2)
     erubis (2.7.0)
     eventmachine (1.2.0.1)
     execjs (2.7.0)
@@ -251,6 +255,7 @@ DEPENDENCIES
   byebug
   cancancan
   capybara
+  cells-erb
   cells-rails
   coffee-rails (~> 4.1.0)
   database_cleaner
