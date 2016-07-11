@@ -48,6 +48,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jquery-ui'
   gem 'rails-assets-noty'
   gem 'rails-assets-animate.css'
+  gem 'rails-assets-swiper'
 end
 
 group :development, :test do
