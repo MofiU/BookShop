@@ -1,2 +1,2 @@
-class Cetegory < ActiveReocrd::Base
+class Cetegory < ActiveRecord::Base
 end

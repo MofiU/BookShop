@@ -1,2 +1,2 @@
-class InventoryRecord < ActiveRecord
+class InventoryRecord < ActiveRecord::Base
 end
