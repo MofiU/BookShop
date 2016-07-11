@@ -1,0 +1,2 @@
+class InventoryRecord < ActiveRecord
+end
