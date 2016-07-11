@@ -11,7 +11,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160603063825) do
+ActiveRecord::Schema.define(version: 20160708103152) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.integer  "user_id"
+    t.decimal  "amount",     precision: 16, scale: 4, default: 0.0, null: false
+    t.decimal  "balance",    precision: 16, scale: 4, default: 0.0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "book_orders", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "order_id"
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.integer  "discount_id"
+    t.integer  "cetegory_id"
+    t.string   "name",                                                       null: false
+    t.string   "author",                                                     null: false
+    t.string   "publisher",                                                  null: false
+    t.string   "number",                                                     null: false
+    t.decimal  "price",        precision: 16, scale: 4, default: 0.0,        null: false
+    t.string   "introduction"
+    t.integer  "inventory",                             default: 0,          null: false
+    t.string   "status",                                default: "inactive", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",                          null: false
+    t.string   "status",     default: "active", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "discounts", force: :cascade do |t|
+    t.integer  "rate",       default: 10,         null: false
+    t.datetime "begin_time",                      null: false
+    t.datetime "end_time",                        null: false
+    t.string   "status",     default: "inactive"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "inventory_records", force: :cascade do |t|
+    t.integer  "book_id"
+    t.integer  "count",                               default: 0,   null: false
+    t.string   "action",                                            null: false
+    t.decimal  "price",      precision: 16, scale: 4, default: 0.0, null: false
+    t.string   "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "accout_id"
+    t.string   "note"
+    t.string   "status",     default: "active", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
