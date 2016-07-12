@@ -21,3 +21,16 @@
 
 en:
   hello: "Hello world"
+  account:
+    invalid_amount: "Invalid Amount"
+    invalid_balance: "Invalid Balance"
+
+  book: 
+    invalid_price: "Invalid Price"
+    invalid_number: "Invalid Number"
+    invalid_inventory: "Invalid Inventory"
+    invalid_status: "Invalid Status"
+
+  cetegry:
+    invalid_status: "Invalid Status"
+    
