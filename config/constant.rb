@@ -1,5 +1,4 @@
 module Constant
-  class Status
-    CONST_VALUES = ['active', 'inactive']
-  end
+  ACTIVE = 'active'
+  INACTIVE = 'inactive'
 end
