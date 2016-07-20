@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_one :account
   after_create  :init_account
   rolify
   # Include default devise modules. Others available are:

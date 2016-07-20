@@ -12,6 +12,7 @@ class MainCell < Cell::ViewModel
   end
 
   def header_top
+    @current_user = model
     render
   end
 

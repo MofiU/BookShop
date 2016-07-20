@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= cell(:main).(:header_top) %>
+<%= cell(:main, current_user).(:header_top) %>
 <%= cell(:main).(:header_bottom) %>
 <div class="main">
   <div class="wrap">
