@@ -8,12 +8,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 <%= cell(:main, current_user).(:header_top) %>
 <%= cell(:main).(:header_bottom) %>
 <div class="main">
-  <div class="wrap">
-    <%= yield %>
-  </div>
+  <%= yield %>
 </div>
 <%= cell(:main).(:footer) %>
 

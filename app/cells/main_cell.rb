@@ -19,5 +19,8 @@ class MainCell < Cell::ViewModel
   def slider
     render
   end
+  def slider2
+    render
+  end
 
 end
