@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160708103152) do
+ActiveRecord::Schema.define(version: 20160720040816) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "user_id"
     t.decimal  "amount",     precision: 16, scale: 4, default: 0.0, null: false
-    t.decimal  "balance",    precision: 16, scale: 4, default: 0.0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -55,6 +54,14 @@ ActiveRecord::Schema.define(version: 20160708103152) do
     t.string   "status",     default: "inactive"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "expense_records", force: :cascade do |t|
+    t.integer  "account_id"
+    t.string   "action",                                            null: false
+    t.decimal  "amount",     precision: 16, scale: 4, default: 0.0, null: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
   end
 
   create_table "inventory_records", force: :cascade do |t|

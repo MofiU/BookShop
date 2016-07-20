@@ -25,7 +25,7 @@ en:
     invalid_amount: "Invalid Amount"
     invalid_balance: "Invalid Balance"
 
-  book: 
+  book:
     invalid_price: "Invalid Price"
     invalid_number: "Invalid Number"
     invalid_inventory: "Invalid Inventory"
@@ -33,4 +33,6 @@ en:
 
   cetegry:
     invalid_status: "Invalid Status"
-    
+
+  expense_record:
+    invalid_amount: "Invalid Amount"
