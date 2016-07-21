@@ -8,8 +8,9 @@
       <%= label_tag nil, "账户余额 ￥:", class: 'col-lg-1'%>
       <%= label_tag nil, current_user.account.amount, class: 'col-lg-1'%>
     </div>
+
     <div class="form-group">
-      <%= link_to "充值", '#', class: 'col-lg-1 btn btn-primary',method: 'get'%>
+      <%= link_to "充值", accounts_pay_path, class: 'col-lg-1 btn btn-primary',method: 'get',remote: true %>
     </div>
   </div>
 </div>

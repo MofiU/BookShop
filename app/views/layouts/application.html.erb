@@ -18,34 +18,7 @@
 
 <!-- Alert, Success, Error, Warning, Information, Confirm -->
 
-<script>
-  $(function(){
-    <% flash.each do |type, msg| %>
-      var type;
-      <% if type == 'alert' %>
-        type = 'warning'
-      <% elsif type == 'notice' %>
-        type = 'information'
-      <% else %>
-        return;
-      <% end %>
-      var n = noty({
-        type: type,
-        text: '<%= msg %>',
-        layout: 'topRight',
-        dismissQueue: true,
-        theme: 'bootstrapTheme',
-        animation: {
-          open: 'animated bounceInLeft', // Animate.css class names
-          close: 'animated bounceOutLeft', // Animate.css class names
-          easing: 'swing', // easing
-          speed: 500 // opening & closing animation speed
-        }
-      });
-    <% end %>
-    <% flash.clear %>
-  });
-</script>
+<%= render 'layouts/flash_message' %>
 
 </body>
 </html>

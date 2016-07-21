@@ -1,0 +1,11 @@
+<div class="wrap">
+  <%= form_for 'pay', url: accounts_recharge_path,html:{ class: "form-horizontal" , remote: true} do |f| %>
+    <div class="form-group">
+      <%= f.label :amount, "充值金额:", class: 'col-lg-1'%>
+      <%= f.number_field(:amount, step: 10, required: true) %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "提交", class: 'col-lg-1 btn btn-primary'%>
+    </div>
+  <% end %>
+</div>

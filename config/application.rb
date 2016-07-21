@@ -34,9 +34,9 @@ module BookShop
       g.factory_girl dir: 'spec/factories'
     end
 
-    # config.before_initialize do
-    #   require 'utils/common_exception'
-    # end
+    config.before_initialize do
+      require 'utils/common_exception'
+    end
 
   end
 end

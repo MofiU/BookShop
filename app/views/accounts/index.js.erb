@@ -1,0 +1,1 @@
+$('div.main').css({ opacity: "0.0" }).html("<%= escape_javascript(render :file => "accounts/index", :formats => [ :html ]) %>").delay(50).animate({ opacity: "1.0" }, 300);

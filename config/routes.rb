@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   }
 
   get 'accounts/index'
+  get 'accounts/pay'
+  post 'accounts/recharge'
 end

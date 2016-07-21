@@ -6,7 +6,7 @@
      <div class="cssmenu">
       <ul>
         <% if @current_user.present? %>
-          <li class="active"><%= link_to 'Account', accounts_index_path %></li> |
+          <li class="active"><%= link_to 'Account', accounts_index_path, remote: true  %></li> |
           <li><a href="checkout.html">Wishlist</a></li> |
           <li><%= link_to 'Checkout',destroy_user_session_path,method: :delete %></li> |
         <% else %>
