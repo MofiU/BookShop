@@ -1,4 +1,6 @@
 module Constant
-  ACTIVE = 'active'
-  INACTIVE = 'inactive'
+  module General
+    ACTIVE = 'active'
+    INACTIVE = 'inactive'
+  end
 end
