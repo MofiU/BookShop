@@ -1,4 +1,3 @@
-
 class Book < ActiveRecord::Base
   has_many :book_orders
   has_many :inventory_records
@@ -14,8 +13,8 @@ class Book < ActiveRecord::Base
   validates :status,     :inclusion => { :in => [Constant::General::ACTIVE, Constant::General::INACTIVE], :message => I18n.t("general.invalid_status") }
 
   scope :active, -> {where(:status, Constant::General::ACTIVE) }
-  has_many :active_discounts, :conditions => {:status => Constant::General::ACTIVE}, :class_name => 'Discount'
-  has_many :active_inventory_records, :conditions => {:status => Constant::General::ACTIVE}, :class_name => 'InvenntoryRecord'
+  has_many :active_discounts, -> { where('status= ?',Constant::General::ACTIVE) }, :class_name => 'Discount'
+  has_many :active_inventory_records,-> { where('status= ?',Constant::General::ACTIVE) }, :class_name => 'InvenntoryRecord'
 
 
   def detail_info
