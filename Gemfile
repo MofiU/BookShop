@@ -50,6 +50,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-noty'
   gem 'rails-assets-animate.css'
   gem 'rails-assets-swiper'
+  gem 'rails-assets-DataTables'
+  gem 'rails-assets-datatables-plugins'
 end
 
 group :development, :test do

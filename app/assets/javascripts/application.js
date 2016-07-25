@@ -18,5 +18,6 @@
 //= require turbolinks
 //= require bootstrap
 //= require noty
+//= require DataTables
 //= require_tree .
 

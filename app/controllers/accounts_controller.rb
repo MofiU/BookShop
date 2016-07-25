@@ -19,4 +19,8 @@ class AccountsController < ApplicationController
     end
   end
 
+  def records
+    @records = current_user.account.expense_records
+  end
+
 end

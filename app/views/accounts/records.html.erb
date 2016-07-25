@@ -1,0 +1,35 @@
+<div class="wrap">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <th>金额</th>
+      <th>操作</th>
+      <th id="created_at">时间</th>
+    </thead>
+    <tbody>
+      <% if @records.present? %>
+        <% @records.each do |record| %>
+          <tr>
+            <td><%= record.amount %></td>
+            <td><%= t("account.#{record.action}") %></td>
+            <td><%= format_time record.created_at %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  $('table').dataTable({
+    'order': [[$("#created_at").index(),'desc']],
+    'responsive': true,
+    "language": {
+      "lengthMenu": "显示 _MENU_ 条记录",
+      "zeroRecords": "0条记录",
+      "info": "页数 _PAGE_ of _PAGES_",
+      "infoEmpty": "没有搜索结果",
+      "infoFiltered": "(从 _MAX_ 个记录中)"
+    }
+  });
+
+</script>
