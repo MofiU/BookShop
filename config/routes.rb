@@ -13,10 +13,8 @@ Rails.application.routes.draw do
   get 'accounts/pay'
   post 'accounts/recharge'
   get 'accounts/records'
-
-
-
-
+  get 'books/show'
+  get 'books/index'
 
   match '*path', to: 'home#404', via: :all
 end
