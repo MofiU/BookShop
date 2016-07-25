@@ -10,5 +10,8 @@ class Book < ActiveRecord::Base
   validates :price,      :numericality => { :greater_than_or_equal_to => 0.0,       :message => I18n.t("book.invalid_price") }
   validates :number,     :numericality => { :greater_than_or_equal_to => 0,         :message => I18n.t("book.invalid_number") }
   validates :inventory,  :numericality => { :only_integer => true,                  :message => I18n.t("book.invalid_inventory") }
-  validates :status,     :inclusion => { :in => [Constant::ACTIVE, Contsant::INACTIVE],   :message => I18n.t("book.invalid_status") }
+  validates :status,     :inclusion => { :in => [Constant.General::ACTIVE, Contsant.General::INACTIVE],   :message => I18n.t("gneral.invalid_status") }
+
+  def detail_info
+  end
 end

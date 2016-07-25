@@ -25,14 +25,18 @@ en:
     invalid_amount: "Invalid Amount"
     invalid_balance: "Invalid Balance"
 
+  general:
+    invalid_status: "Invalid Status"
+
   book:
     invalid_price: "Invalid Price"
     invalid_number: "Invalid Number"
     invalid_inventory: "Invalid Inventory"
-    invalid_status: "Invalid Status"
 
   cetegry:
-    invalid_status: "Invalid Status"
+
+  inventory_record:
+    invalid_count: "Invalid Count"
 
   expense_record:
     invalid_amount: "Invalid Amount"

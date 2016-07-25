@@ -3,5 +3,5 @@ class Order <ActiveRecord::Base
   has_many :book_orders
 
   validates_presnece_of :note, :status,
-  validates_inclusion_of :status, :in => [Constant::ACTIVE, Constant::INACTIVE]
+  validates_inclusion_of :status, :in => [Constant.General::ACTIVE, Constant.General::INACTIVE], :message => I18n.t('general.invalid_status')
 end
